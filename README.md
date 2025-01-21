@@ -1,115 +1,93 @@
-# Desafio Fórum Hub - API REST com Java e Spring Boot
+# ForumHub
 
-<div align="center">
+**ForumHub** é uma aplicação de fórum desenvolvida para facilitar a troca de ideias e discussões entre usuários sobre diversos tópicos. Este projeto foi desenvolvido como parte do desafio de Spring Boot proposto pela Alura.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Java Version](https://img.shields.io/badge/Java-8%2B-blue)](https://www.java.com/)
-![GitHub repo size](https://img.shields.io/github/repo-size/rodrigoborge/coonversor-moedas-java)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rodrigoborge/coonversor-moedas-java)
+---
 
-</div><br>
+## 🛠️ Tecnologias Utilizadas
 
-## Badge
+- **Java** 21
+- **Spring Boot** 3.3.0
+- **Hibernate** (JPA)
+- **PostgreSQL**
+- **Maven**
 
-Este é um badge conquistado por ter desenvolvido este projeto com a Alura no programa ONE - "Oracle Next Education" em parceria com a Oracle:
+---
 
-<div align="center">
+## 📂 Estrutura do Projeto
 
-![Badge](img/badge.png)
+- **src/main/java**: Contém o código-fonte da aplicação.
+- **src/main/resources**: Arquivos de configuração, como `application.properties`.
+- **src/test/java**: Testes automatizados.
 
-</div>
+---
 
-## Descrição do Desafio
+## ⚙️ Configuração do Ambiente
 
-O desafio Fórum Hub consiste na criação de uma API REST utilizando Java e Spring Boot. Este desafio tem como objetivo proporcionar uma experiência prática do papel de um desenvolvedor back-end, permitindo a aplicação de conceitos avançados de Java e Spring Boot, como criação de endpoints e implementação de camadas de segurança. A realização deste desafio é essencial para o programa ONE, pois permite a consolidação dos conhecimentos adquiridos.
+1. **Pré-requisitos:**
+   - Java 21 ou superior instalado.
+   - Maven instalado.
+   - Banco de dados PostgreSQL configurado.
 
-## Estrutura do Projeto
-
-O projeto está estruturado de acordo com as melhores práticas para desenvolvimento com Spring Boot, seguindo a arquitetura MVC (Model-View-Controller). A estrutura do diretório é a seguinte:
-
-```bash
-forum-hub/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── forumhub/
-│   │   │           ├── controller/
-│   │   │           ├── model/
-│   │   │           ├── repository/
-│   │   │           ├── service/
-│   │   │           └── ForumHubApplication.java
-│   │   └── resources/
-│   │       ├── application.properties
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── forumhub/
-├── .gitignore
-├── README.md
-└── pom.xml
-```
-
-## Funcionalidades
-
-A API REST do Fórum Hub possui as seguintes funcionalidades:
-
-- **Endpoints de Usuários:**
-  - Criação de novos usuários.
-  - Autenticação e login de usuários.
-  - Recuperação de informações de perfil.
-
-- **Endpoints de Tópicos:**
-  - Criação de novos tópicos.
-  - Listagem de tópicos.
-  - Atualização e exclusão de tópicos.
-
-- **Endpoints de Respostas:**
-  - Criação de novas respostas em tópicos.
-  - Listagem de respostas em um tópico específico.
-
-- **Segurança:**
-  - Implementação de autenticação JWT para proteger os endpoints.
-  - Configuração de segurança para diferentes níveis de acesso.
-
-## Tecnologias Utilizadas
-
-- **Java 17:** Linguagem de programação utilizada para o desenvolvimento da API.
-- **Spring Boot:** Framework utilizado para a criação da aplicação.
-- **Spring Security:** Utilizado para implementação das camadas de segurança.
-- **JWT (JSON Web Token):** Utilizado para autenticação dos usuários.
-- **H2 Database:** Banco de dados em memória utilizado para testes.
-- **Maven:** Ferramenta de gerenciamento de dependências e build.
-
-## Configuração do Ambiente
-
-Para configurar o ambiente de desenvolvimento, siga os passos abaixo:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/forum-hub.git
-   cd forum-hub
-
-2. **Instale as dependências do Maven:**
-   ```bash
-   mvn install
+2. **Configurar Banco de Dados:**
+   Certifique-se de criar um banco de dados chamado `forumhub` no PostgreSQL. Atualize as credenciais no arquivo `application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/forumhub
+   spring.datasource.username=SEU_USUARIO
+   spring.datasource.password=SUA_SENHA
    ```
-3. **Execute a aplicação:**
+
+3. **Clonar o Repositório:**
+   ```bash
+   git clone https://github.com/Carlosaleee/ForumHub.git
+   cd ForumHub
+   ```
+
+4. **Executar o Projeto:**
    ```bash
    mvn spring-boot:run
    ```
-  A aplicação estará disponível em `http://localhost:8080`.
 
-## Testes
-Os testes unitários e de integração estão localizados no diretório src/test/java/com/forumhub. Para executar os testes, utilize o comando:
-```bash
-mvn test
-```
+---
 
-## Contribuição
+## 🚀 Funcionalidades
 
-Contribuições são bem-vindas! Sinta-se à vontade para enviar sugestões, correções de bugs ou melhorias através de issues e pull requests.
+- Cadastro de usuários.
+- Criação de tópicos de discussão.
+- Comentários em tópicos.
+- Listagem e filtragem de tópicos.
 
-## Licença
+---
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE)
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Siga os passos abaixo:
+
+1. Faça um fork deste repositório.
+2. Crie uma branch para a sua feature:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Realize as alterações e faça o commit:
+   ```bash
+   git commit -m "Descrição da feature"
+   ```
+4. Envie para o repositório remoto:
+   ```bash
+   git push origin minha-feature
+   ```
+5. Abra um Pull Request.
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+Carlos Alexandre da Silva  
+[GitHub](https://github.com/Carlosaleee)  
+[LinkedIn](https://www.linkedin.com/in/carlos-alexandre-66b962279/)
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais informações.
